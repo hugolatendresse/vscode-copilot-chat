@@ -47,7 +47,7 @@ import { VirtualTool } from '../../tools/common/virtualTools/virtualTool';
 import { IToolGroupingService } from '../../tools/common/virtualTools/virtualToolTypes';
 import { addCacheBreakpoints } from './cacheBreakpoints';
 import { EditCodeIntent, EditCodeIntentInvocation, EditCodeIntentInvocationOptions, mergeMetadata, toNewChatReferences } from './editCodeIntent';
-import { getRequestedToolCallIterationLimit, IContinueOnErrorConfirmation } from './toolCallingLoop';
+import { getRequestedToolCallIterationLimit, IContinueOnErrorConfirmation, dummyChange } from './toolCallingLoop';
 
 export const getAgentTools = (instaService: IInstantiationService, request: vscode.ChatRequest) =>
 	instaService.invokeFunction(async accessor => {
